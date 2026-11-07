@@ -1,0 +1,134 @@
+/* =========================================================
+   SCAT — room.css
+   the room in b/w → the way down (three photographs) → a floor plan
+   you can sit in → the small print
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+.poster { position: relative; min-height: 100svh; overflow: hidden; isolation: isolate; }
+.photo { position: absolute; inset: 0 0 -14% 0; z-index: -1; }
+.photo::after { content: ''; position: absolute; inset: 0; background: radial-gradient(110% 90% at 50% 50%, transparent 40%, rgba(0, 0, 0, .55)); pointer-events: none; }
+.slot--bw > img { filter: grayscale(1) contrast(1.08); }
+.corner { position: absolute; z-index: 3; font-size: clamp(24px, 2.4vw, 34px); color: var(--cream); }
+.corner--tl { left: var(--pad); top: 96px; }
+.corner--tr { right: var(--pad); top: 96px; }
+.btn { display: inline-block; border-radius: 999px; padding: 15px 36px; color: var(--felt);
+  background: linear-gradient(180deg, #fff 0%, #f6ede2 48%, #e5d6c3 52%, #f2e8dc 100%); box-shadow: inset 0 1px 0 #fff, 0 4px 14px rgba(60, 0, 0, .3); transition: background .3s, color .3s; }
+.btn:hover { background: linear-gradient(180deg, #2a1a16, #0b0908 52%, #1c1210); color: var(--cream); }
+
+/* =========================================================
+   01 THE Room (the Nubois poster, again: red script, white grotesk)
+   ========================================================= */
+.rm-hero { display: grid; justify-items: center; align-content: start; text-align: center; padding: 18vh var(--pad) 80px; }
+.rm-hero .photo::after { background: radial-gradient(100% 80% at 50% 50%, rgba(0, 0, 0, .15), rgba(0, 0, 0, .6)); }
+.rm-hero__lock { display: grid; justify-items: center; font-weight: 400; }
+.rm-hero__the { font-size: clamp(34px, 3.4vw, 52px); transform: scaleY(1.25); letter-spacing: .06em; color: #fff; }
+.rm-hero__scr { font-size: clamp(170px, 21vw, 330px); color: var(--red); margin-top: -.1em; text-shadow: 0 0 30px rgba(196, 22, 28, .4); }
+.rm-hero__caps { display: flex; gap: clamp(60px, 14vw, 240px); font-family: 'Helvetica Neue', Arial, sans-serif; font-size: clamp(30px, 3.6vw, 54px); color: #fff; letter-spacing: .01em; margin-top: -.3em; }
+.rm-hero__sub { position: absolute; left: var(--pad); bottom: calc(var(--pad) + 4px); color: #fff; font-size: 10px; text-align: left; }
+.rm-hero .cam { position: absolute; right: calc(var(--pad) + 6px); bottom: calc(var(--pad) + 4px); }
+
+/* =========================================================
+   02 the way down
+   ========================================================= */
+.down { padding: clamp(110px, 12vw, 170px) var(--pad) clamp(60px, 8vw, 110px); max-width: 1400px; margin: 0 auto; }
+.down__head { display: flex; align-items: baseline; justify-content: center; gap: 18px; margin-bottom: 70px; color: var(--cream); }
+.down__head .tc { font-size: clamp(60px, 7vw, 110px); transform: scaleY(1.28); transform-origin: bottom; }
+.down__head .scr { font-size: clamp(100px, 11vw, 170px); color: var(--red); text-shadow: 0 0 26px rgba(196, 22, 28, .3); }
+.down__steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 46px); }
+.step { display: grid; align-content: start; gap: 10px; }
+.step:nth-child(2) { margin-top: 90px; }
+.step:nth-child(3) { margin-top: 180px; }
+.step__ph { position: relative; inset: auto; z-index: 0; aspect-ratio: 4 / 5; overflow: hidden; margin-bottom: 16px; box-shadow: 0 30px 60px rgba(0, 0, 0, .45); }
+.step__ph::after { box-shadow: inset 0 0 0 1px rgba(244, 236, 224, .18); }
+.step__n { font-size: 34px; transform: scaleY(1.2); transform-origin: left; color: var(--red); }
+.step__k { font-size: clamp(44px, 4vw, 60px); color: var(--cream); }
+.step__d { font-size: 9px; letter-spacing: .2em; color: var(--mute); max-width: 340px; }
+
+/* =========================================================
+   03 the floor plan
+   ========================================================= */
+.plan { padding: clamp(80px, 9vw, 130px) var(--pad); max-width: 1400px; margin: 0 auto; }
+.plan__head { display: grid; justify-items: center; text-align: center; color: var(--red); margin-bottom: 50px; text-shadow: 0 0 26px rgba(196, 22, 28, .3); }
+.plan__head .tc { font-size: clamp(30px, 3vw, 44px); transform: scaleY(1.25); }
+.plan__head .scr { font-size: clamp(100px, 11vw, 170px); margin-top: -.06em; }
+.plan__head .sp { color: var(--mute); font-size: 10px; margin-top: 6px; text-shadow: none; }
+.plan__wrap { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr); gap: clamp(30px, 4vw, 60px); align-items: center; }
+.plan__map { border-radius: 26px; padding: clamp(10px, 1.6vw, 24px);
+  background: radial-gradient(60% 70% at 40% 50%, rgba(196, 22, 28, .1), transparent 70%), linear-gradient(160deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .01)); border: 1px solid rgba(244, 236, 224, .14); }
+.plan__map svg { width: 100%; height: auto; overflow: visible; }
+.pl-wall { fill: rgba(255, 255, 255, .015); stroke: rgba(244, 236, 224, .55); stroke-width: 2; }
+.pl-line { stroke: rgba(244, 236, 224, .3); stroke-width: 1.5; }
+.pl-curtain { fill: none; stroke: var(--red); stroke-width: 3; stroke-linecap: round; }
+.pl-stage { fill: rgba(196, 22, 28, .1); stroke: rgba(196, 22, 28, .5); stroke-width: 1.5; }
+.pl-piano { fill: #0b0908; stroke: var(--cream); stroke-width: 2; }
+.pl-keys { fill: var(--cream); opacity: .8; }
+.pl-bar { fill: rgba(244, 236, 224, .08); stroke: rgba(244, 236, 224, .5); stroke-width: 1.5; }
+.pl-back { fill: none; stroke: rgba(244, 236, 224, .2); stroke-dasharray: 4 6; }
+.pl-lab { font-family: var(--f-sp); font-size: 11px; letter-spacing: .3em; fill: rgba(244, 236, 224, .5); font-weight: 500; }
+.pl-t { cursor: pointer; outline: none; }
+.pl-top { fill: #15100e; stroke: rgba(244, 236, 224, .55); stroke-width: 1.5; transition: fill .3s, stroke .3s; }
+.pl-seat { fill: none; stroke: rgba(244, 236, 224, .35); stroke-width: 1.5; transition: stroke .3s, fill .3s; }
+.pl-bench { stroke-width: 7; stroke-linecap: round; stroke: rgba(196, 22, 28, .45); }
+.pl-id { font-family: var(--f-tc); font-size: 17px; fill: var(--cream); pointer-events: none; }
+.pl-id--small { font-family: var(--f-sp); font-size: 9px; letter-spacing: .2em; fill: rgba(244, 236, 224, .6); }
+.pl-t:hover .pl-top, .pl-t:focus-visible .pl-top { fill: rgba(196, 22, 28, .5); stroke: #fff; }
+.pl-t:hover .pl-seat, .pl-t:focus-visible .pl-seat { stroke: #fff; }
+.pl-t.is-picked .pl-top { fill: var(--red); stroke: #fff; filter: drop-shadow(0 0 10px rgba(196, 22, 28, .9)); }
+.pl-t.is-picked .pl-seat { stroke: #fff; fill: rgba(255, 255, 255, .15); }
+.pl-t.is-picked .pl-bench { stroke: var(--red); }
+
+.plan__info { display: grid; gap: 12px; align-content: center; }
+.plan__k { font-size: 9px; color: var(--mute); }
+.plan__name { font-size: clamp(64px, 6vw, 96px); color: var(--cream); line-height: .95; }
+.plan__seats { font-size: 32px; transform: scaleY(1.2); transform-origin: left; color: var(--red); }
+.plan__note { font-size: 10px; letter-spacing: .2em; color: var(--cream-2); min-height: 4.5em; }
+.plan__acts { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 8px; }
+.plan__clear { font-size: 9px; color: var(--mute); border-bottom: 1px solid currentColor; }
+.plan__legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 20px; font-size: 8px; color: var(--mute); }
+.plan__legend li { display: flex; align-items: center; gap: 8px; }
+.lg { display: inline-block; width: 12px; height: 12px; border: 1.5px solid rgba(244, 236, 224, .55); }
+.lg--booth { border-color: rgba(196, 22, 28, .7); border-width: 0 3px 3px; }
+.lg--two, .lg--bar { border-radius: 50%; }
+.lg--bar { width: 9px; height: 9px; }
+
+/* =========================================================
+   04 the small print
+   ========================================================= */
+.det { padding: clamp(60px, 8vw, 110px) var(--pad) clamp(40px, 6vw, 80px); max-width: 1300px; margin: 0 auto; }
+.det__scr { font-size: clamp(90px, 10vw, 160px); color: var(--cream); text-align: center; margin-bottom: 50px; }
+.det__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px clamp(20px, 4vw, 60px); }
+.det__list li { display: grid; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(244, 236, 224, .16); }
+.det__list b { font-size: 30px; transform: scaleY(1.2); transform-origin: left; color: var(--red); font-weight: 400; letter-spacing: .02em; }
+.det__list p { font-size: 10px; letter-spacing: .2em; color: var(--cream-2); }
+
+/* =========================================================
+   smaller screens
+   ========================================================= */
+@media (max-width: 1000px) {
+  .plan__wrap { grid-template-columns: 1fr; }
+  .det__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .corner--tl, .corner--tr { top: 84px; font-size: 24px; }
+  .rm-hero { padding-top: 24vh; }
+  .rm-hero__scr { font-size: clamp(150px, 46vw, 220px); }
+  .rm-hero__caps { gap: 40px; font-size: 26px; }
+  .rm-hero__sub { letter-spacing: .18em; right: var(--pad); bottom: calc(var(--pad) + 40px); }
+  .rm-hero .cam { display: none; }
+  .down__head { flex-direction: column; align-items: center; gap: 0; }
+  .down__steps { grid-template-columns: 1fr; gap: 60px; }
+  .step:nth-child(2), .step:nth-child(3) { margin-top: 0; }
+  .step__ph { aspect-ratio: 4 / 3.4; }
+  .plan__map { margin: 0 calc(-1 * var(--pad)); padding: 8px; border-radius: 0; border-width: 1px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .plan__map svg { width: 680px; max-width: none; }
+  .plan__map::after { content: "← swipe the room →"; display: block; text-align: center; font-family: var(--f-sp); font-size: 8px; letter-spacing: .3em; color: var(--mute); position: sticky; left: 0; width: calc(100vw - 16px); padding-top: 8px; }
+  .pl-lab { font-size: 15px; }
+  .plan__name { font-size: 60px; }
+  .det__list { grid-template-columns: 1fr; }
+}
+
+/* her ROOM photos: keep the subject in frame */
+.step:nth-child(1) .step__ph > img { object-position: 60% 50%; }
+.step:nth-child(2) .step__ph > img { object-position: 50% 40%; }
+.step:nth-child(3) .step__ph > img { object-position: 30% 60%; }

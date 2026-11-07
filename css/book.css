@@ -1,0 +1,110 @@
+/* =========================================================
+   SCAT — book.css
+   THE Rossmore again: red felt, the lockup on the left, a satin card
+   on the right that turns into a ticket.
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+.poster { position: relative; min-height: 100svh; overflow: hidden; isolation: isolate; }
+.photo { position: absolute; inset: 0; z-index: -1; background: radial-gradient(90% 80% at 45% 40%, #dc2a24, #b5151a 55%, #6b0a0d 100%); }
+.photo::after { content: ''; position: absolute; inset: 0; background: radial-gradient(120% 100% at 30% 40%, rgba(40, 0, 0, .1), rgba(30, 0, 0, .6)); pointer-events: none; }
+.btn { display: inline-block; justify-self: start; border-radius: 999px; padding: 15px 36px; color: var(--felt);
+  background: linear-gradient(180deg, #fff 0%, #f6ede2 48%, #e5d6c3 52%, #f2e8dc 100%); box-shadow: inset 0 1px 0 #fff, 0 4px 14px rgba(60, 0, 0, .3); transition: background .3s, color .3s; }
+.btn:hover { background: linear-gradient(180deg, #2a1a16, #0b0908 52%, #1c1210); color: var(--cream); }
+
+/* =========================================================
+   01 the felt
+   ========================================================= */
+.bk { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; gap: 40px; padding: 130px var(--pad) 70px; }
+.bk .cam { position: absolute; left: calc(var(--pad) + 6px); right: auto; top: 92px; bottom: auto; justify-items: start; }
+.bk__lock { color: var(--cream); align-self: end; padding-bottom: 20px; }
+.bk__the { font-size: clamp(18px, 2vw, 28px); font-weight: 600; letter-spacing: .2em; margin-left: 12%; }
+.bk__scr { font-size: clamp(130px, 14vw, 230px); transform: rotate(-12deg); transform-origin: left bottom; margin: .1em 0 .3em; line-height: .8; white-space: nowrap; text-shadow: 0 10px 40px rgba(60, 0, 0, .4); }
+.bk__addr { font-size: clamp(13px, 1.4vw, 19px); font-weight: 600; letter-spacing: .14em; line-height: 1.5; }
+.bk__addr small { display: block; font-size: .78em; letter-spacing: .2em; margin-left: 18%; margin-top: 6px; }
+.bk__night { margin-top: 26px; font-size: 9px; color: rgba(255, 245, 235, .85); }
+.bk__night::before { content: '● '; color: #fff; }
+
+.bk__card { justify-self: end; width: min(600px, 100%); padding: clamp(24px, 3vw, 40px); color: var(--cream); border-radius: 26px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .03) 40%, rgba(90, 0, 4, .25)), rgba(110, 6, 9, .48);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3);
+  border: 1px solid rgba(255, 240, 230, .32); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), 0 30px 80px rgba(40, 0, 0, .45); }
+
+.bk__form { display: grid; gap: 18px; }
+.f { display: grid; gap: 8px; }
+.f .sp { font-size: 9px; color: rgba(244, 236, 224, .78); }
+.f__who { color: var(--cream) !important; letter-spacing: .2em !important; }
+.f--row { grid-template-columns: 1fr 1fr; gap: 20px; }
+.f--row > div { display: grid; gap: 8px; align-content: start; }
+.f__days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.f__days button { padding: 8px 0 6px; display: grid; justify-items: center; gap: 2px; border: 1px solid rgba(244, 236, 224, .35); border-radius: 16px; transition: background .3s, color .3s; }
+.f__days button span { font-size: 7px; letter-spacing: .1em; font-weight: 500; }
+.f__days button b { font-family: var(--f-tc); font-weight: 400; font-size: 24px; line-height: 1; transform: scaleY(1.15); }
+.f__days button:disabled { opacity: .35; cursor: not-allowed; }
+.f__days button:disabled b { text-decoration: line-through; }
+.f__sets { display: flex; gap: 4px; }
+.f__sets label { flex: 1; }
+.f__sets input { position: absolute; opacity: 0; pointer-events: none; }
+.f__sets span { display: block; text-align: center; padding: 8px 0 6px; font-size: 26px; border: 1px solid rgba(244, 236, 224, .35); border-radius: 999px; transition: background .3s, color .3s; }
+.f__days button.is-on, .f__sets input:checked + span { color: var(--felt); background: linear-gradient(180deg, #fff 0%, #f6ede2 48%, #e5d6c3 52%, #f2e8dc 100%); box-shadow: inset 0 1px 0 #fff, 0 4px 14px rgba(60, 0, 0, .3); }
+.f__sets input:focus-visible + span, .f__days button:focus-visible { outline: 1px solid #fff; outline-offset: 2px; }
+.f__party { display: grid; grid-template-columns: 40px 1fr 40px; align-items: center; text-align: center; border: 1px solid rgba(244, 236, 224, .35); border-radius: 999px; }
+.f__party button { font-size: 18px; padding: 6px 0; }
+.f__party output { font-size: 28px; transform: scaleY(1.15); }
+.f__plan { color: #fff; border-bottom: 1px solid currentColor; }
+.f__sel { appearance: none; -webkit-appearance: none; width: 100%; padding: 12px 40px 12px 18px; border-radius: 999px; border: 1px solid rgba(244, 236, 224, .35); color: var(--cream); font-size: 10px !important; letter-spacing: .2em;
+  background: rgba(0, 0, 0, .12) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23f4ece0' stroke-width='1.4'/%3E%3C/svg%3E") no-repeat right 18px center; }
+.f__sel option { color: #2a1c18; background: #fbf7f1; }
+.f__name input, .f__mail input, .f__note { background: none; border: 0; border-bottom: 1px solid rgba(244, 236, 224, .5); color: var(--cream); outline: 0; width: 100%; padding: 4px 0; }
+.f__name input { font-size: 36px; }
+.f__mail input, .f__note { font-size: 11px !important; letter-spacing: .14em; text-transform: none; padding: 12px 0 8px; }
+.f input::placeholder { color: rgba(244, 236, 224, .42); }
+.f.is-bad input { border-color: #fff; }
+.f__err { min-height: 1em; color: #fff !important; font-size: 9px; }
+.f__small { font-size: 8px !important; color: rgba(244, 236, 224, .65) !important; }
+
+/* the ticket */
+.tk { display: grid; gap: 14px; }
+.tk__k { font-size: 9px; color: rgba(244, 236, 224, .78); }
+.tk__who { font-size: clamp(56px, 5.4vw, 84px); line-height: 1; }
+.tk__dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 1px dashed rgba(244, 236, 224, .45); border-bottom: 1px dashed rgba(244, 236, 224, .45); }
+.tk__dl div { padding: 12px 0; display: grid; gap: 2px; }
+.tk__dl div:nth-child(odd) { border-right: 1px dashed rgba(244, 236, 224, .3); padding-right: 14px; }
+.tk__dl div:nth-child(even) { padding-left: 18px; }
+.tk__dl div:nth-child(-n+2) { border-bottom: 1px dashed rgba(244, 236, 224, .3); }
+.tk__dl dt { font-size: 8px; color: rgba(244, 236, 224, .65); }
+.tk__dl dd { font-size: 11px; color: #fff; }
+.tk__code { font-size: clamp(46px, 4.8vw, 70px); transform: scaleY(1.2); transform-origin: left; white-space: nowrap; }
+.tk__mail { font-size: 8px; color: rgba(244, 236, 224, .7); }
+.tk__acts { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 6px; }
+.tk__link { font-size: 9px; border-bottom: 1px solid currentColor; }
+
+/* =========================================================
+   02 before you come
+   ========================================================= */
+.faq { padding: clamp(90px, 10vw, 140px) var(--pad) clamp(40px, 6vw, 80px); max-width: 1300px; margin: 0 auto; }
+.faq__scr { font-size: clamp(90px, 10vw, 160px); color: var(--cream); text-align: center; margin-bottom: 50px; }
+.faq__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px clamp(20px, 4vw, 60px); }
+.faq__list li { display: grid; gap: 12px; padding-top: 20px; border-top: 1px solid var(--red); }
+.faq__list b { font-size: 30px; transform: scaleY(1.2); transform-origin: left; color: var(--red); font-weight: 400; letter-spacing: .02em; }
+.faq__list p { font-size: 10px; letter-spacing: .2em; color: var(--cream-2); }
+
+@media (max-width: 1000px) {
+  .bk { grid-template-columns: 1fr; padding-top: 120px; }
+  .bk__lock { align-self: start; }
+  .bk__card { justify-self: stretch; width: 100%; }
+  .faq__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .bk { padding: 110px 12px 40px; }
+  .bk__lock { padding-left: 8px; }
+  .bk__scr { font-size: clamp(100px, 30vw, 140px); }
+  .bk .cam { display: none; }
+  .bk__card { padding: 24px 18px; border-radius: 22px; }
+  .f--row { grid-template-columns: 1fr; gap: 18px; }
+  .f__days button b { font-size: 20px; }
+  .f__days button span { font-size: 6px; letter-spacing: .04em; }
+  .f__name input { font-size: 32px; }
+  .tk__code { font-size: 36px; white-space: normal; }
+  .faq__list { grid-template-columns: 1fr; }
+}

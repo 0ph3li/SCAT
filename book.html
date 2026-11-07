@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>Reservations — The Scat Club, Harlem</title>
+  <meta name="description" content="Hold a table at the Scat Club, Harlem: pick the night, the set and your table, and get three syllables to sing at the door. No deposit, walk-ins always welcome at the bar." />
+  <meta name="theme-color" content="#0b0908" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!--
+     ═══════════════════════════════════════════════════════════════
+              ___________________________
+             |  ADMIT  ·  THE SCAT CLUB  |          s i t e   b y
+             |                           |
+             |   sat 7 nov · 9:00 set    |          g h o s t l y . g r l
+             |   table 3 · two guests    |          ───────────────────────────
+             |                           |          concept  ·  design  ·  code
+             |   at the door, sing:      |
+             |     DEE · DOO · DE        |                 /\_/\
+             |___________________________|                ( o.o )   <3
+                                                           > ^ <
+                       hold a table. sing your way in.
+     ═══════════════════════════════════════════════════════════════
+       concept, design & code by ghostly.grl ♥
+       reservations — the Rossmore felt, a satin card, a ticket that sings.
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Jost:wght@300..600&family=Libre+Caslon+Condensed:wght@400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=9" />
+  <link rel="stylesheet" href="css/book.css?v=2" />
+</head>
+<body data-page="book">
+
+  <!-- ============ cursor ============ -->
+  <div class="cur" aria-hidden="true"><div class="cur__frame"><i></i><i></i><i></i><i></i></div><i class="cur__dot"></i><span class="cur__label sp"></span></div>
+
+  <!-- ============ header ============ -->
+  <header class="hdr sp">
+    <a href="index.html" class="hdr__logo" data-cursor="home">The <span class="scr">Scat</span> Club</a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="tonight.html">Tonight</a>
+      <a href="menu.html">Menu</a>
+      <a href="room.html">The Room</a>
+      <a href="book.html">Reservations</a>
+    </nav>
+    <div class="hdr__right">
+      <span data-live>harlem</span>
+      <button class="hdr__sound" type="button" data-sound>sound <b>on</b></button>
+      <button class="hdr__burger" type="button" aria-label="open menu">menu</button>
+    </div>
+  </header>
+
+  <div class="toast scr" role="status" aria-live="polite"></div>
+
+  <main>
+
+    <!-- ============ 01 — the Rossmore felt: the lockup, and the card ============ -->
+    <section class="poster bk" id="top">
+      <div class="photo slot" data-img="HOME/felt.png" data-desc="red pool table from above, a hand with red nails on a cue, billiard balls">
+        <span class="slot__tag sp">img/HOME/felt.png — red felt</span>
+      </div>
+      <div class="cam"><p class="exif" data-exif="36"></p><p class="stamp" data-stamp></p></div>
+
+      <div class="bk__lock">
+        <p class="bk__the sp">HOLD</p>
+        <p class="bk__scr scr">a table</p>
+        <p class="bk__addr sp">2259 Frederick Douglass Blvd.<br />downstairs · Harlem, New York<br /><small>phone 555·0193</small></p>
+        <p class="bk__night sp" data-act>tonight · —</p>
+      </div>
+
+      <div class="bk__card">
+        <form class="bk__form" data-book novalidate>
+          <div class="f">
+            <p class="sp">the night</p>
+            <div class="f__days" data-days></div>
+            <p class="sp f__who" data-who>—</p>
+          </div>
+          <div class="f f--row">
+            <div>
+              <p class="sp">the set</p>
+              <div class="f__sets" data-sets></div>
+            </div>
+            <div>
+              <p class="sp">guests</p>
+              <div class="f__party">
+                <button type="button" data-step-btn="-1" aria-label="fewer">–</button>
+                <output class="tc" data-party>2</output>
+                <button type="button" data-step-btn="1" aria-label="more">+</button>
+              </div>
+            </div>
+          </div>
+          <label class="f">
+            <span class="sp">where you'd like to sit · <a href="room.html" class="f__plan">see the floor plan</a></span>
+            <select class="f__sel sp" name="seat" data-seat></select>
+          </label>
+          <div class="f f--row">
+            <label class="f f__name">
+              <span class="sp">under the name</span>
+              <input class="scr" type="text" name="name" autocomplete="name" placeholder="your name" maxlength="24" required />
+            </label>
+            <label class="f f__mail">
+              <span class="sp">email · in case the set changes</span>
+              <input class="sp" type="email" name="email" autocomplete="email" placeholder="you@email.com" maxlength="60" required />
+            </label>
+          </div>
+          <label class="f">
+            <span class="sp">anything we should know · optional</span>
+            <input class="f__note sp" type="text" name="note" maxlength="90" placeholder="a birthday, an allergy, a song request" />
+          </label>
+          <p class="sp f__err" data-err aria-live="polite"></p>
+          <button class="btn sp" type="submit" data-magnetic>hold my table</button>
+          <p class="sp f__small">no deposit · we hold the table 15 minutes after the set starts · 9 or more? hello@scat.nyc</p>
+        </form>
+
+        <!-- the ticket -->
+        <div class="tk" data-ticket hidden aria-live="polite">
+          <p class="sp tk__k">admit · the scat club</p>
+          <p class="scr tk__who">See you, <span data-t-name></span></p>
+          <dl class="tk__dl sp">
+            <div><dt>night</dt><dd data-t-night></dd></div>
+            <div><dt>set</dt><dd data-t-set></dd></div>
+            <div><dt>guests</dt><dd data-t-party></dd></div>
+            <div><dt>table</dt><dd data-t-seat></dd></div>
+          </dl>
+          <p class="sp tk__k">at the door, sing</p>
+          <p class="tc tk__code" data-t-code></p>
+          <p class="sp tk__mail" data-t-mail></p>
+          <div class="tk__acts">
+            <button class="btn sp" type="button" data-sing data-magnetic>hear the code ♪</button>
+            <button class="tk__link sp" type="button" data-ics>add to calendar</button>
+            <button class="tk__link sp" type="button" data-change>change</button>
+            <button class="tk__link sp" type="button" data-cancel>cancel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 — before you come ============ -->
+    <section class="faq">
+      <p class="scr faq__scr">Before you come</p>
+      <ol class="faq__list">
+        <li><b class="tc">WALK-INS</b><p class="sp">always welcome · the bar is never booked, ten stools, first come first sung</p></li>
+        <li><b class="tc">RUNNING LATE</b><p class="sp">we hold your table fifteen minutes after the set starts · call 555·0193 and hum, we'll wait</p></li>
+        <li><b class="tc">CANCELLING</b><p class="sp">no deposit, no fee · cancel here or call, someone on the stairs will be grateful</p></li>
+        <li><b class="tc">THE MINIMUM</b><p class="sp">one drink per set per guest, zero proof counts · no cover before nine</p></li>
+        <li><b class="tc">BIG TABLES</b><p class="sp">nine or more, or the whole room on a monday · hello@scat.nyc</p></li>
+        <li><b class="tc">THE CODE</b><p class="sp">three syllables, sung at the door · forgot them? your name works too, it just sounds less nice</p></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- ============ footer ============ -->
+  <footer class="ft">
+    <div class="ft__lock">
+      <span class="tc">THE</span><span class="scr">Scat</span><span class="tc">CLUB</span>
+    </div>
+    <div class="ft__cols sp">
+      <div><b>hours</b>tue — thu · 6pm — 1am<br />fri — sat · 6pm — 2am<br />sun · 5pm — midnight<br />monday the band sleeps</div>
+      <div><b>find us</b>2259 frederick douglass blvd<br />downstairs · harlem ny 10027<br />a · b · c · d to 125th st</div>
+      <div><b>call us</b>555 · 0193<br />@scat.harlem<br />hello@scat.nyc</div>
+    </div>
+    <nav class="ft__nav sp" aria-label="footer">
+      <a href="tonight.html">Tonight</a><a href="menu.html">Menu</a><a href="room.html">The Room</a><a href="book.html">Reservations</a>
+    </nav>
+    <div class="ft__bottom sp">
+      <span>© the scat club 2026 · a concept bar</span>
+      <span data-clock>harlem 00:00</span>
+      <span class="ft-sign">concept, design &amp; code by <span class="sig scr">ghostly.grl</span> ♥</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=10"></script>
+  <script src="js/book.js?v=2"></script>
+</body>
+</html>
+<!--
+          ♪    /\_/\      ♫
+              ( o.o )   <3  ghostly.grl
+          ♫    > ^ <   ♪
+              sing your way in.
+-->

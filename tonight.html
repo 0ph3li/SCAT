@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>Tonight — The Scat Club, Harlem</title>
+  <meta name="description" content="Who plays tonight at the Scat Club, Harlem: the act, the running order of the night, and the seven nights ahead. Doors at six, the first set at nine." />
+  <meta name="theme-color" content="#0b0908" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!--
+     ═══════════════════════════════════════════════════════════════
+              _______________
+             |  T O N I G H T |        s i t e   b y
+             |_______________|
+               |  ♪   ♫   ♪ |          g h o s t l y . g r l
+               |   _______   |         ───────────────────────────
+               |  |  9:00 |  |         concept  ·  design  ·  code
+               |  | 11:30 |  |
+               |  |_______|  |                 /\_/\
+               |_____________|                ( o.o )   <3
+                 ||       ||                   > ^ <
+                 ||       ||
+                ====     ====          the running order, harlem time
+     ═══════════════════════════════════════════════════════════════
+       concept, design & code by ghostly.grl ♥
+       tonight — the poster of the night, a running order that knows
+       what time it is in harlem, and the seven nights ahead.
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Jost:wght@300..600&family=Libre+Caslon+Condensed:wght@400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=9" />
+  <link rel="stylesheet" href="css/tonight.css?v=5" />
+</head>
+<body data-page="tonight">
+
+  <!-- ============ cursor ============ -->
+  <div class="cur" aria-hidden="true"><div class="cur__frame"><i></i><i></i><i></i><i></i></div><i class="cur__dot"></i><span class="cur__label sp"></span></div>
+
+  <!-- ============ header ============ -->
+  <header class="hdr sp">
+    <a href="index.html" class="hdr__logo" data-cursor="home">The <span class="scr">Scat</span> Club</a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="tonight.html">Tonight</a>
+      <a href="menu.html">Menu</a>
+      <a href="room.html">The Room</a>
+      <a href="book.html">Reservations</a>
+    </nav>
+    <div class="hdr__right">
+      <span data-live>harlem</span>
+      <button class="hdr__sound" type="button" data-sound>sound <b>on</b></button>
+      <button class="hdr__burger" type="button" aria-label="open menu">menu</button>
+    </div>
+  </header>
+
+  <div class="toast scr" role="status" aria-live="polite"></div>
+
+  <main>
+
+    <!-- ============ 01 — tonight's poster: who plays, and how long until they do ============ -->
+    <section class="poster tn-hero" id="top">
+      <div class="photo slot" data-tn-photo data-desc="tonight, in the room">
+        <span class="slot__tag sp">img/HOME/night-N.png — tonight's photograph</span>
+      </div>
+      <p class="corner corner--tl scr">Tonight</p>
+      <p class="corner corner--tr scr">Harlem, NY</p>
+      <div class="cam"><p class="exif" data-exif="02"></p><p class="stamp" data-stamp></p></div>
+
+      <h1 class="tn-hero__lock">
+        <span class="tn-hero__day tc" data-h-day>SATURDAY</span>
+        <span class="tn-hero__scr scr" data-h-scr>Moses</span>
+        <span class="tn-hero__caps tc" data-h-caps>GREY QUARTET</span>
+      </h1>
+      <p class="tn-hero__kind sp" data-h-kind>hard bop · tenor sax &amp; trouble</p>
+
+      <div class="tn-hero__now">
+        <p class="sp" data-h-label>the first set in</p>
+        <p class="tn-hero__count tc" data-h-count aria-live="off">00:00:00</p>
+        <p class="sp tn-hero__date" data-h-date>—</p>
+      </div>
+    </section>
+
+    <!-- ============ 02 — the running order: the night, hour by hour, with a hairline for now ============ -->
+    <section class="run" id="order">
+      <header class="run__head">
+        <p class="tc">THE</p>
+        <p class="scr">Running</p>
+        <p class="tc run__caps">ORDER</p>
+        <p class="sp run__sub" data-r-sub>tonight, hour by hour · harlem time</p>
+      </header>
+      <div class="run__body">
+        <span class="run__rail" aria-hidden="true"><i data-r-rail></i></span>
+        <ol class="run__list" data-run></ol>
+      </div>
+    </section>
+
+    <!-- ============ 03 — the week ahead: seven nights, tonight first ============ -->
+    <section class="wk" id="week">
+      <header class="wk__head">
+        <p class="scr">The week</p>
+        <p class="sp">seven nights, tonight first · tables for every set</p>
+      </header>
+      <ol class="wk__list" data-week></ol>
+      <p class="wk__note sp">walk-ins always welcome at the bar · no cover before nine · sunday the whole room sings</p>
+    </section>
+
+    <!-- ============ 04 — downstairs: hold a table for tonight ============ -->
+    <section class="poster tn-door" id="door">
+      <div class="photo slot slot--bw" data-img="HOME/room.jpg" data-desc="the bar downstairs, silhouettes against the bottles">
+        <span class="slot__tag sp">img/HOME/room.jpg — the bar downstairs</span>
+      </div>
+      <div class="cam"><p class="exif" data-exif="19"></p><p class="stamp" data-stamp></p></div>
+      <div class="tn-door__lock">
+        <p class="tc">DOWN</p>
+        <p class="scr">the stairs</p>
+        <p class="sp tn-door__sub" data-d-sub>sing the code at the door</p>
+        <a class="btn sp" href="book.html" data-magnetic data-d-btn>hold a table for tonight</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ hold a table: a satin card over red felt, opened by every "hold a table" ============ -->
+  <div class="sheet" data-sheet hidden role="dialog" aria-modal="true" aria-label="hold a table">
+    <div class="sheet__bg slot" data-img="HOME/felt.png" data-close data-cursor="close"></div>
+    <div class="sheet__card book__card">
+      <button class="sheet__x sp" type="button" data-close>close ✕</button>
+      <p class="sheet__lock"><span class="tc">HOLD</span><span class="scr">a table</span></p>
+      <form class="book__form" data-book novalidate>
+        <div class="f">
+          <p class="sp">the night</p>
+          <div class="f__days" data-days></div>
+          <p class="sp f__who" data-who>—</p>
+        </div>
+        <div class="f f--row">
+          <div>
+            <p class="sp">the set</p>
+            <div class="f__sets" data-sets></div>
+          </div>
+          <div>
+            <p class="sp">guests</p>
+            <div class="f__party">
+              <button type="button" data-step-btn="-1" aria-label="fewer">–</button>
+              <output class="tc" data-party>2</output>
+              <button type="button" data-step-btn="1" aria-label="more">+</button>
+            </div>
+          </div>
+        </div>
+        <label class="f f__name">
+          <span class="sp">under the name</span>
+          <input class="scr" type="text" name="name" autocomplete="name" placeholder="your name" maxlength="24" required />
+        </label>
+        <button class="btn sp" type="submit" data-magnetic>hold my table</button>
+      </form>
+
+      <div class="book__done" aria-live="polite" hidden>
+        <p class="sp book__k">your table is held</p>
+        <p class="book__who scr">See you, <span data-t-name></span></p>
+        <p class="sp" data-t-when></p>
+        <p class="sp book__k">at the door, sing</p>
+        <p class="book__code tc" data-t-code></p>
+        <div class="book__acts">
+          <button class="book__undo sp" type="button" data-unbook>change the reservation ›</button>
+          <button class="book__undo sp" type="button" data-sing>hear the code again ♪</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ footer ============ -->
+  <footer class="ft">
+    <div class="ft__lock">
+      <span class="tc">THE</span><span class="scr">Scat</span><span class="tc">CLUB</span>
+    </div>
+    <div class="ft__cols sp">
+      <div><b>hours</b>tue — thu · 6pm — 1am<br />fri — sat · 6pm — 2am<br />sun · 5pm — midnight<br />monday the band sleeps</div>
+      <div><b>find us</b>2259 frederick douglass blvd<br />downstairs · harlem ny 10027<br />a · b · c · d to 125th st</div>
+      <div><b>call us</b>555 · 0193<br />@scat.harlem<br />hello@scat.nyc</div>
+    </div>
+    <nav class="ft__nav sp" aria-label="footer">
+      <a href="tonight.html">Tonight</a><a href="menu.html">Menu</a><a href="room.html">The Room</a><a href="book.html">Reservations</a>
+    </nav>
+    <div class="ft__bottom sp">
+      <span>© the scat club 2026 · a concept bar</span>
+      <span data-clock>harlem 00:00</span>
+      <span class="ft-sign">concept, design &amp; code by <span class="sig scr">ghostly.grl</span> ♥</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=10"></script>
+  <script src="js/tonight.js?v=5"></script>
+</body>
+</html>
+<!--
+          ♪    /\_/\      ♫
+              ( o.o )   <3  ghostly.grl
+          ♫    > ^ <   ♪
+              doors at six. the call between sets.
+-->

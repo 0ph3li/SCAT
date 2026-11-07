@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>The Menu — The Scat Club, Harlem</title>
+  <meta name="description" content="The menu of the Scat Club, Harlem: eight cocktails named after the sound that orders them, wine and champagne by the glass, and small plates from the kitchen until midnight." />
+  <meta name="theme-color" content="#0b0908" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!--
+     ═══════════════════════════════════════════════════════════════
+           shoo · be · doo        ba · dee · ya
+               \  ___  /              _____
+                \/   \/              |     |        s i t e   b y
+                 \___/               |~~~~~|
+                   |                 |     |        g h o s t l y . g r l
+                   |                 |_____|        ───────────────────────────
+                 __|__                              concept  ·  design  ·  code
+                                                          /\_/\
+           skee · dat        bop        zoot             ( o.o )   <3
+                                                          > ^ <
+                      eight drinks, eight sounds. sing for it.
+     ═══════════════════════════════════════════════════════════════
+       concept, design & code by ghostly.grl ♥
+       the menu — one drink at a time under a single light, then the
+       wine, the champagne and the kitchen, set like a printed card.
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Jost:wght@300..600&family=Libre+Caslon+Condensed:wght@400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=9" />
+  <link rel="stylesheet" href="css/menu.css?v=2" />
+</head>
+<body data-page="menu">
+
+  <!-- ============ cursor ============ -->
+  <div class="cur" aria-hidden="true"><div class="cur__frame"><i></i><i></i><i></i><i></i></div><i class="cur__dot"></i><span class="cur__label sp"></span></div>
+
+  <!-- ============ header ============ -->
+  <header class="hdr sp">
+    <a href="index.html" class="hdr__logo" data-cursor="home">The <span class="scr">Scat</span> Club</a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="tonight.html">Tonight</a>
+      <a href="menu.html">Menu</a>
+      <a href="room.html">The Room</a>
+      <a href="book.html">Reservations</a>
+    </nav>
+    <div class="hdr__right">
+      <span data-live>harlem</span>
+      <button class="hdr__sound" type="button" data-sound>sound <b>on</b></button>
+      <button class="hdr__burger" type="button" aria-label="open menu">menu</button>
+    </div>
+  </header>
+
+  <div class="toast scr" role="status" aria-live="polite"></div>
+
+  <main>
+
+    <!-- ============ 01 — the title card ============ -->
+    <section class="mn-hero" id="top">
+      <p class="corner corner--tl scr">The menu</p>
+      <p class="corner corner--tr scr">Harlem, NY</p>
+      <h1 class="mn-hero__lock">
+        <span class="tc mn-hero__the">THE</span>
+        <span class="scr mn-hero__scr">Drinks</span>
+        <span class="tc mn-hero__caps">&amp; THE KITCHEN</span>
+      </h1>
+      <p class="sp mn-hero__sub">every cocktail is named after the sound that orders it</p>
+      <nav class="mn-hero__jump sp" aria-label="menu sections">
+        <a href="#drinks">cocktails <b>08</b></a>
+        <a href="#cellar">wine &amp; champagne <b>09</b></a>
+        <a href="#kitchen">small plates <b>08</b></a>
+      </nav>
+      <p class="sp mn-hero__hint" aria-hidden="true">scroll — one drink at a time</p>
+    </section>
+
+    <!-- ============ 02 — one drink at a time, under one light (sticky stage) ============ -->
+    <section class="stage" id="drinks" data-stage>
+      <div class="stage__pin">
+        <div class="stage__glow" data-glow aria-hidden="true"></div>
+        <p class="stage__name scr" data-s-name aria-hidden="true">Shoo-Be-Doo</p>
+        <div class="stage__glasses" data-s-glasses></div>
+
+        <ol class="stage__idx sp" data-s-idx aria-label="the cocktails"></ol>
+
+        <div class="stage__card">
+          <p class="stage__n tc"><span data-s-n>01</span><small>/ 08</small></p>
+          <p class="stage__syl tc" data-s-syl>SHOO · BE · DOO</p>
+          <p class="stage__desc sp" data-s-desc>—</p>
+          <p class="stage__what scr" data-s-what>—</p>
+          <div class="stage__taste sp" data-s-taste></div>
+          <div class="stage__foot">
+            <p class="stage__price tc" data-s-price>$18</p>
+            <button class="stage__sing sp" type="button" data-s-sing data-cursor="sing it">sing it ♪</button>
+          </div>
+        </div>
+        <span class="stage__bar" aria-hidden="true"><i data-s-bar></i></span>
+      </div>
+    </section>
+
+    <!-- ============ 03 — how to order (a short card, then off to the call) ============ -->
+    <section class="how">
+      <p class="tc how__the">NOBODY</p>
+      <p class="scr how__scr">orders here</p>
+      <ol class="how__steps">
+        <li><b class="tc">I</b><span class="sp">the bartender sings a call</span><em class="scr">Shoo-be-doo?</em></li>
+        <li><b class="tc">II</b><span class="sp">you sing three syllables back</span><em class="scr">Ba-dee-ya!</em></li>
+        <li><b class="tc">III</b><span class="sp">your answer is your drink</span><em class="scr">$17, thank you</em></li>
+      </ol>
+      <a class="btn sp" href="index.html#call" data-magnetic>try the call</a>
+      <p class="sp how__note">too shy to sing? point at the menu. we won't tell.</p>
+    </section>
+
+    <!-- ============ 04 — the cellar: wine & champagne, a printed card ============ -->
+    <section class="card-sec" id="cellar">
+      <header class="card-sec__head">
+        <p class="tc">THE</p>
+        <p class="scr">Cellar</p>
+        <p class="sp">wine &amp; champagne · by the glass / by the bottle</p>
+      </header>
+      <div class="card-sec__cols" data-cellar></div>
+    </section>
+
+    <!-- ============ 05 — the kitchen: small plates, with one photograph ============ -->
+    <section class="kitchen" id="kitchen">
+      <div class="kitchen__photo photo slot" data-img="MENU/plates.png" data-desc="sweet potato fries in a paper cone, smoked paprika mayo, a negroni on the rocks, on the dark bar">
+        <span class="slot__tag sp">img/MENU/plates.png — fries, mayo and a negroni on the bar</span>
+        <div class="cam"><p class="exif" data-exif="22"></p><p class="stamp" data-stamp></p></div>
+      </div>
+      <div class="kitchen__side">
+        <header class="card-sec__head card-sec__head--left">
+          <p class="tc">SMALL</p>
+          <p class="scr">Plates</p>
+          <p class="sp">from the kitchen until midnight · fridays & saturdays until one</p>
+        </header>
+        <ol class="plates" data-plates></ol>
+        <p class="sp kitchen__note">tell us about allergies when you answer the call · 20% service is shared with the band</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ footer ============ -->
+  <footer class="ft">
+    <div class="ft__lock">
+      <span class="tc">THE</span><span class="scr">Scat</span><span class="tc">CLUB</span>
+    </div>
+    <div class="ft__cols sp">
+      <div><b>hours</b>tue — thu · 6pm — 1am<br />fri — sat · 6pm — 2am<br />sun · 5pm — midnight<br />monday the band sleeps</div>
+      <div><b>find us</b>2259 frederick douglass blvd<br />downstairs · harlem ny 10027<br />a · b · c · d to 125th st</div>
+      <div><b>call us</b>555 · 0193<br />@scat.harlem<br />hello@scat.nyc</div>
+    </div>
+    <nav class="ft__nav sp" aria-label="footer">
+      <a href="tonight.html">Tonight</a><a href="menu.html">Menu</a><a href="room.html">The Room</a><a href="book.html">Reservations</a>
+    </nav>
+    <div class="ft__bottom sp">
+      <span>© the scat club 2026 · a concept bar</span>
+      <span data-clock>harlem 00:00</span>
+      <span class="ft-sign">concept, design &amp; code by <span class="sig scr">ghostly.grl</span> ♥</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=10"></script>
+  <script src="js/menu.js?v=2"></script>
+</body>
+</html>
+<!--
+          ♪    /\_/\      ♫
+              ( o.o )   <3  ghostly.grl
+          ♫    > ^ <   ♪
+              sing for it.
+-->

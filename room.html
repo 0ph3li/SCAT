@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>The Room — The Scat Club, Harlem</title>
+  <meta name="description" content="The room at the Scat Club, Harlem: seventeen steps down, sixty-four seats, one baby grand, a bar where the bartender sings. Pick your table on the floor plan." />
+  <meta name="theme-color" content="#0b0908" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!--
+     ═══════════════════════════════════════════════════════════════
+         ________________________________
+        |  in  | B1 | B2 | B3 | B4 |     |        s i t e   b y
+        | ==== |____|____|____|____|  B  |
+        | ==== |   o   o   o   o   o  |  A  |    g h o s t l y . g r l
+        |______|   o   o   o   o   o  |  R  |    ───────────────────────────
+        |  ___     _   _   _   _      |     |    concept  ·  design  ·  code
+        | /   \   |_| |_| |_| |_|     |     |
+        | \___/ piano                 |     |          /\_/\
+        |_____________________________|_____|         ( o.o )   <3
+                                                       > ^ <
+              sixty-four seats. one piano. no bad table.
+     ═══════════════════════════════════════════════════════════════
+       concept, design & code by ghostly.grl ♥
+       the room — the way down, a floor plan you can sit in, the details.
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Jost:wght@300..600&family=Libre+Caslon+Condensed:wght@400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=9" />
+  <link rel="stylesheet" href="css/room.css?v=3" />
+</head>
+<body data-page="room">
+
+  <!-- ============ cursor ============ -->
+  <div class="cur" aria-hidden="true"><div class="cur__frame"><i></i><i></i><i></i><i></i></div><i class="cur__dot"></i><span class="cur__label sp"></span></div>
+
+  <!-- ============ header ============ -->
+  <header class="hdr sp">
+    <a href="index.html" class="hdr__logo" data-cursor="home">The <span class="scr">Scat</span> Club</a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="tonight.html">Tonight</a>
+      <a href="menu.html">Menu</a>
+      <a href="room.html">The Room</a>
+      <a href="book.html">Reservations</a>
+    </nav>
+    <div class="hdr__right">
+      <span data-live>harlem</span>
+      <button class="hdr__sound" type="button" data-sound>sound <b>on</b></button>
+      <button class="hdr__burger" type="button" aria-label="open menu">menu</button>
+    </div>
+  </header>
+
+  <div class="toast scr" role="status" aria-live="polite"></div>
+
+  <main>
+
+    <!-- ============ 01 — the room, black & white ============ -->
+    <section class="poster rm-hero" id="top">
+      <div class="photo slot slot--bw" data-img="HOME/room.jpg" data-desc="the bar downstairs, silhouettes against the bottles, black and white">
+        <span class="slot__tag sp">img/HOME/room.jpg — the bar, b/w</span>
+      </div>
+      <p class="corner corner--tl scr">Downstairs</p>
+      <p class="corner corner--tr scr">Harlem, NY</p>
+      <div class="cam"><p class="exif" data-exif="27"></p><p class="stamp" data-stamp></p></div>
+      <h1 class="rm-hero__lock">
+        <span class="tc rm-hero__the">THE</span>
+        <span class="scr rm-hero__scr">Room</span>
+      </h1>
+      <p class="rm-hero__caps"><span>64 SEATS</span><span>1 PIANO</span></p>
+      <p class="sp rm-hero__sub">no bad table · no phones on the piano · no cover before nine</p>
+    </section>
+
+    <!-- ============ 02 — the way down: seventeen steps, a bell, a curtain ============ -->
+    <section class="down" id="down">
+      <header class="down__head">
+        <p class="tc">THE WAY</p>
+        <p class="scr">down</p>
+      </header>
+      <ol class="down__steps">
+        <li class="step">
+          <div class="step__ph photo slot" data-img="ROOM/1.jpg" data-desc="the band on stage, a woman in silhouette, a candle on the table">
+            <span class="slot__tag sp">img/ROOM/1.jpg — the band, a silhouette</span>
+          </div>
+          <p class="tc step__n">I</p>
+          <p class="scr step__k">Seventeen steps</p>
+          <p class="sp step__d">from frederick douglass blvd, under the red sign · you hear the band before you see it · mind the ninth, it creaks in B flat</p>
+        </li>
+        <li class="step">
+          <div class="step__ph photo slot" data-img="ROOM/2.jpg" data-desc="the back bar, bottles lit amber from behind, coupes upside down">
+            <span class="slot__tag sp">img/ROOM/2.jpg — the back bar</span>
+          </div>
+          <p class="tc step__n">II</p>
+          <p class="scr step__k">Sing at the door</p>
+          <p class="sp step__d">booked? sing your three syllables · walk-in? hum anything, the door likes you</p>
+        </li>
+        <li class="step">
+          <div class="step__ph photo slot" data-img="ROOM/3.jpg" data-desc="the baby grand under a low ceiling, warm walls, the stage">
+            <span class="slot__tag sp">img/ROOM/3.jpg — the piano</span>
+          </div>
+          <p class="tc step__n">III</p>
+          <p class="scr step__k">Through the curtain</p>
+          <p class="sp step__d">velvet, heavy, a little dusty · the piano is on your left · the bar, on your right</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ 03 — the floor plan: pick your table ============ -->
+    <section class="plan" id="plan">
+      <header class="plan__head">
+        <p class="tc">THE</p>
+        <p class="scr">Floor plan</p>
+        <p class="sp">point at a table · pick the one you want · we'll try to hold it for you</p>
+      </header>
+      <div class="plan__wrap">
+        <div class="plan__map">
+          <svg viewBox="0 0 1000 600" data-map role="img" aria-label="floor plan of the room"></svg>
+        </div>
+        <aside class="plan__info" aria-live="polite">
+          <p class="sp plan__k" data-i-k>your table</p>
+          <p class="scr plan__name" data-i-name>Point at one</p>
+          <p class="tc plan__seats" data-i-seats>64 SEATS</p>
+          <p class="sp plan__note" data-i-note>booths along the wall, little tables in the middle, the bar on the right, and two seats on the piano bench for those who ask nicely.</p>
+          <div class="plan__acts">
+            <a class="btn sp" href="book.html" data-i-book data-magnetic>hold a table</a>
+            <button class="plan__clear sp" type="button" data-i-clear hidden>forget it</button>
+          </div>
+          <ul class="plan__legend sp">
+            <li><i class="lg lg--booth"></i>booth · 4</li>
+            <li><i class="lg lg--two"></i>table · 2</li>
+            <li><i class="lg lg--four"></i>table · 4</li>
+            <li><i class="lg lg--bar"></i>bar stool</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ 04 — the details ============ -->
+    <section class="det">
+      <p class="scr det__scr">The small print</p>
+      <ol class="det__list">
+        <li><b class="tc">THE PIANO</b><p class="sp">a 1948 baby grand, tuned every tuesday before the jam · you may touch it if the pianist says so</p></li>
+        <li><b class="tc">THE SOUND</b><p class="sp">no microphones on the trio nights · the room was built for it: brick, velvet, a low ceiling</p></li>
+        <li><b class="tc">WHAT TO WEAR</b><p class="sp">whatever makes you sing · coats &amp; hats at the cloakroom, it's free</p></li>
+        <li><b class="tc">ACCESS</b><p class="sp">there's a lift by the side door on 125th · ring the bell and we come up</p></li>
+        <li><b class="tc">PHONES</b><p class="sp">photos yes, flash no, calls upstairs · the band will forgive one video</p></li>
+        <li><b class="tc">MONDAYS</b><p class="sp">the band sleeps, the room is yours · private hire up to 64 · hello@scat.nyc</p></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- ============ footer ============ -->
+  <footer class="ft">
+    <div class="ft__lock">
+      <span class="tc">THE</span><span class="scr">Scat</span><span class="tc">CLUB</span>
+    </div>
+    <div class="ft__cols sp">
+      <div><b>hours</b>tue — thu · 6pm — 1am<br />fri — sat · 6pm — 2am<br />sun · 5pm — midnight<br />monday the band sleeps</div>
+      <div><b>find us</b>2259 frederick douglass blvd<br />downstairs · harlem ny 10027<br />a · b · c · d to 125th st</div>
+      <div><b>call us</b>555 · 0193<br />@scat.harlem<br />hello@scat.nyc</div>
+    </div>
+    <nav class="ft__nav sp" aria-label="footer">
+      <a href="tonight.html">Tonight</a><a href="menu.html">Menu</a><a href="room.html">The Room</a><a href="book.html">Reservations</a>
+    </nav>
+    <div class="ft__bottom sp">
+      <span>© the scat club 2026 · a concept bar</span>
+      <span data-clock>harlem 00:00</span>
+      <span class="ft-sign">concept, design &amp; code by <span class="sig scr">ghostly.grl</span> ♥</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=10"></script>
+  <script src="js/room.js?v=3"></script>
+</body>
+</html>
+<!--
+          ♪    /\_/\      ♫
+              ( o.o )   <3  ghostly.grl
+          ♫    > ^ <   ♪
+              no bad table.
+-->

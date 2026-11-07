@@ -1,0 +1,289 @@
+/* =========================================================
+   SCAT — index.css (home, v4 · 2000s chic)
+   one poster per screen, each a ref:
+   THE Jazz CLUB → Midnight LOUNGE → Dorian SOCIETY → the drinks → Nubois → THE Rossmore
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+/* ---------- loader: the curtain ---------- */
+.ld { position: fixed; inset: 0; z-index: 300; background: radial-gradient(70% 60% at 50% 50%, #1a1210, var(--ink) 70%); display: grid; place-items: center; }
+.ld__in { display: grid; justify-items: center; gap: 26px; }
+.ld__lock { display: flex; align-items: center; gap: .3em; color: var(--cream); }
+.ld__lock .tc { font-size: clamp(34px, 4vw, 54px); transform: scaleY(1.3); letter-spacing: .06em; }
+.ld__lock .scr { font-size: clamp(64px, 7.4vw, 104px); color: var(--red); margin: 0 -.06em; transform: rotate(-6deg) translateY(-.06em); text-shadow: 0 0 26px rgba(196, 22, 28, .3); }
+.ld__line { display: block; width: min(320px, 60vw); height: 1px; background: linear-gradient(90deg, transparent, rgba(244, 236, 224, .7), transparent); transform-origin: center; }
+.ld__corner { position: absolute; top: 34px; font-size: 26px; color: var(--cream-2); }
+.ld__corner--l { left: var(--pad); } .ld__corner--r { right: var(--pad); }
+.ld__cap { position: absolute; bottom: 40px; color: var(--mute); font-size: 10px; }
+
+/* ---------- a poster screen ---------- */
+.poster { position: relative; min-height: 100svh; overflow: hidden; isolation: isolate; }
+.photo { position: absolute; inset: -10% 0; z-index: -1; }
+.photo::after { content: ''; position: absolute; inset: 0; background: radial-gradient(120% 90% at 50% 50%, transparent 40%, rgba(0, 0, 0, .55)); pointer-events: none; }
+
+/* ---------- 01 THE Jazz CLUB ---------- */
+.hero .slot { background:
+  radial-gradient(18% 9% at 36% 30%, rgba(255, 230, 205, .32), transparent 70%),
+  radial-gradient(60% 55% at 40% 60%, #5a2a1a, #2a120c 60%, #0b0606 100%); }
+.hero { display: grid; place-items: center; }
+.lock { display: grid; justify-items: center; font-weight: 400; text-align: center; color: var(--cream); filter: drop-shadow(0 6px 30px rgba(0, 0, 0, .35)); }
+.lock__caps { font-size: clamp(110px, 17vw, 250px); transform: scaleY(1.32); transform-origin: center; letter-spacing: -.02em; }
+.lock__scr { font-size: clamp(130px, 19vw, 290px); margin: -.12em 0 -.04em; position: relative; z-index: 2; transform: rotate(-8deg); }
+.hero__tonight { position: absolute; left: var(--pad); bottom: calc(var(--pad) + 4px); color: var(--cream); font-size: 10px; }
+
+/* ---------- 02 THE Midnight LOUNGE — the call ---------- */
+.call { display: grid; place-items: center; text-align: center; background: #070605; }
+.slot--glass { background: #070605; }
+/* her photo: a frosted martini glass, cut out — the bowl sits behind the lockup, the stem runs off the bottom */
+.call .photo { background: radial-gradient(46% 38% at 50% 40%, rgba(255, 238, 214, .1), transparent 70%), #070605; }
+.glassfx { position: absolute; left: 50%; bottom: -16%; height: 118%; width: auto; max-width: none; transform: translateX(-50%); transform-origin: 50% 30%;
+  object-fit: contain; filter: brightness(.8) contrast(1.02) drop-shadow(0 0 60px rgba(255, 240, 222, .14)); user-select: none; pointer-events: none; }
+.call .photo::after { background: radial-gradient(110% 90% at 50% 50%, transparent 50%, rgba(0, 0, 0, .6)); }
+.corner { position: absolute; z-index: 3; font-size: clamp(24px, 2.4vw, 34px); color: var(--cream); transition: color .4s; }
+button.corner:hover { color: var(--red); }
+.corner--tl { left: var(--pad); top: 96px; }
+.corner--tr { right: var(--pad); top: 96px; }
+.corner--b { left: 50%; bottom: 34px; transform: translateX(-50%); white-space: nowrap; }
+.call__lock { position: relative; z-index: 2; color: var(--red); display: grid; justify-items: center; margin-top: -2vh; width: min(560px, 86vw); }
+.call__the { font-size: clamp(28px, 3vw, 44px); transform: scaleY(1.25); }
+.call__scr { font-size: clamp(78px, 9vw, 134px); margin: .02em 0 -.14em; }
+.call__caps { font-size: clamp(64px, 7.6vw, 116px); transform: scaleY(1.25); letter-spacing: 0; }
+.call__sub { margin-top: 22px; font-size: 10px; color: var(--red-2); }
+.call__ans { font-size: 40px; min-height: 1.1em; margin-top: 8px; color: var(--red); }
+.call__sylls { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; margin-top: 6px; max-width: 440px; color: var(--red-2); font-size: 12px; }
+.call__sylls button { padding: 4px 2px; border-bottom: 1px solid transparent; transition: color .3s, border-color .3s; }
+.call__sylls button:hover { color: var(--red); border-color: var(--red); }
+.call__sylls button:disabled { opacity: .25; pointer-events: none; }
+.call.is-poured .call__sylls { display: none; }
+
+/* ---------- 03 Dorian SOCIETY — this week ---------- */
+.week { display: grid; grid-template-rows: auto 1fr auto; justify-items: center; text-align: center; padding: 110px var(--pad) 40px; color: #f3dfc6; }
+.slot--blur { background:
+  radial-gradient(22% 18% at 28% 28%, rgba(255, 220, 190, .5), transparent 70%),
+  radial-gradient(20% 16% at 70% 44%, rgba(255, 235, 210, .45), transparent 70%),
+  radial-gradient(24% 20% at 22% 74%, rgba(255, 225, 200, .4), transparent 70%),
+  radial-gradient(18% 14% at 56% 82%, rgba(255, 240, 220, .3), transparent 70%),
+  radial-gradient(80% 70% at 50% 50%, #4a2c1f, #1c100b 70%, #0b0706 100%); }
+.slot--blur > img { filter: blur(2px) saturate(1.05); }
+.week .photo::after { background: radial-gradient(100% 80% at 50% 50%, rgba(0, 0, 0, .1), rgba(0, 0, 0, .55)); }
+.week__top { align-self: start; display: grid; justify-items: center; }
+.week__scr { font-size: clamp(110px, 14vw, 220px); }
+.week__caps { font-size: clamp(36px, 4.4vw, 66px); transform: scaleY(1.2); margin-top: -.25em; letter-spacing: .02em; }
+.week__mid { align-self: end; display: grid; gap: 14px; justify-items: center; margin-bottom: 9vh; }
+.week__kind { font-size: clamp(30px, 3.4vw, 50px); transform: scaleY(1.2); letter-spacing: .01em; }
+.week__start { font-size: clamp(20px, 2vw, 28px); transform: scaleY(1.2); }
+.week__foot { width: 100%; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; font-size: clamp(18px, 1.9vw, 27px); }
+.week__foot p { transform: scaleY(1.2); }
+.week__foot p:first-child { text-align: left; } .week__foot p:last-child { text-align: right; }
+.crest { width: 54px; fill: none; stroke: currentColor; stroke-width: 1.2; }
+.crest text { fill: currentColor; stroke: none; font-family: var(--f-scr); font-size: 22px; }
+.week__days { position: absolute; left: 50%; top: 44%; transform: translate(-50%, -50%); display: flex; gap: 6px; font-size: 10px; }
+.week__days button { padding: 6px 10px; color: rgba(243, 223, 198, .55); border: 1px solid transparent; transition: color .3s, border-color .3s; }
+.week__days button:hover { color: #f3dfc6; }
+.week__days button.is-on { color: #f3dfc6; border-color: rgba(243, 223, 198, .5); }
+.week__days button.is-today::after { content: ' ·'; color: var(--red); }
+
+/* ---------- 04 the drinks (black, red caps) ---------- */
+.menu { padding: clamp(110px, 13vw, 180px) var(--pad); max-width: 1200px; margin: 0 auto; }
+.menu__head { display: grid; justify-items: center; text-align: center; color: var(--red); margin-bottom: 80px; }
+.menu__head .tc { font-size: clamp(30px, 3vw, 44px); transform: scaleY(1.25); }
+.menu__head .scr { font-size: clamp(100px, 12vw, 180px); margin-top: -.08em; }
+.menu__head .sp { color: var(--mute); font-size: 10px; margin-top: 4px; }
+.menu__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(30px, 6vw, 100px); }
+.drink { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 20px; padding: 26px 0 24px; border-top: 1px solid rgba(244, 236, 224, .14); align-items: baseline; }
+.drink__name { font-size: clamp(46px, 4.6vw, 66px); color: var(--cream); transition: color .4s; }
+.drink__price { font-family: var(--f-tc); font-size: 30px; transform: scaleY(1.2); color: var(--red); }
+.drink__syl { grid-column: 1 / -1; color: var(--red); font-size: 10px; }
+.drink__desc { grid-column: 1 / -1; color: var(--mute); font-size: 10px; letter-spacing: .2em; }
+.drink:hover .drink__name { color: var(--red); }
+.menu__more { display: block; width: max-content; margin: 50px auto 0; color: var(--cream); border-bottom: 1px solid var(--red); padding-bottom: 4px; }
+
+/* ---------- 05 Nubois BAR LOUNGE — the room ---------- */
+.room { display: grid; justify-items: center; align-content: start; padding-top: 14vh; text-align: center; }
+.slot--bw { background:
+  radial-gradient(14% 20% at 40% 46%, rgba(255, 255, 255, .55), transparent 70%),
+  radial-gradient(16% 26% at 74% 60%, rgba(255, 255, 255, .7), transparent 70%),
+  radial-gradient(12% 16% at 14% 40%, rgba(255, 255, 255, .45), transparent 70%),
+  radial-gradient(40% 20% at 40% 86%, rgba(255, 255, 255, .5), transparent 70%),
+  radial-gradient(90% 80% at 50% 50%, #6d6d6d, #2a2a2a 70%, #111 100%); }
+.slot--bw > img { filter: grayscale(1) contrast(1.15) brightness(1.05); }
+.room .photo::after { background: radial-gradient(120% 90% at 50% 50%, transparent 50%, rgba(0, 0, 0, .45)); }
+.room__scr { font-size: clamp(130px, 17vw, 260px); color: var(--red); }
+.room__caps { display: flex; gap: clamp(60px, 12vw, 200px); font-family: 'Helvetica Neue', Arial, sans-serif; font-size: clamp(30px, 3.6vw, 52px); color: #fff; letter-spacing: .01em; margin-top: -.1em; }
+.room__note { position: absolute; left: var(--pad); bottom: calc(var(--pad) + 4px); color: #fff; font-size: 10px; }
+.cheers { position: absolute; left: 50%; bottom: 7vh; width: clamp(130px, 16vw, 220px); transform: translateX(-50%); fill: none; stroke: var(--red); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- 06 THE Rossmore — reservations on red felt ---------- */
+.book { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; gap: 40px; padding: 120px var(--pad) 70px; }
+.slot--felt { background: radial-gradient(90% 80% at 45% 40%, #dc2a24, #b5151a 55%, #6b0a0d 100%); }
+.slot--felt::before { content: ''; position: absolute; inset: 0; background: linear-gradient(170deg, rgba(0, 0, 0, .55), transparent 25%), radial-gradient(60% 50% at 30% 20%, rgba(255, 255, 255, .06), transparent 70%); }
+.book .photo::after { background: radial-gradient(120% 100% at 40% 40%, transparent 50%, rgba(40, 0, 0, .5)); }
+.ball { position: absolute; border-radius: 50%; box-shadow: 18px 22px 30px rgba(60, 0, 0, .55), inset -8px -10px 18px rgba(0, 0, 0, .25); }
+.ball--w { width: 120px; height: 120px; left: 52%; top: 38%; background: radial-gradient(circle at 35% 30%, #fff, #e8e1d2 60%, #b9b0a0); }
+.ball--g { width: 100px; height: 100px; right: 26%; top: 24%; background: radial-gradient(circle at 35% 30%, #c7ead8, #6fae96 60%, #3e7863); }
+.ball--s { width: 70px; height: 70px; left: 30%; top: 10%; background: radial-gradient(circle at 35% 30%, #fff, #e9e3d6 60%, #bdb3a3); }
+.book__lock { color: var(--cream); align-self: end; padding-bottom: 10px; }
+.book__the { font-size: clamp(18px, 2vw, 28px); font-weight: 600; letter-spacing: .2em; margin-left: 12%; }
+.book__scr { font-size: clamp(150px, 17vw, 260px); transform: rotate(-14deg); transform-origin: left bottom; margin: .05em 0 .12em; line-height: .8; }
+.book__addr { font-size: clamp(14px, 1.6vw, 22px); font-weight: 600; letter-spacing: .14em; line-height: 1.5; }
+.book__addr small { display: block; font-size: .78em; letter-spacing: .2em; margin-left: 18%; margin-top: 6px; }
+.book__card { background: rgba(120, 8, 10, .35); backdrop-filter: blur(2px); padding: clamp(24px, 3vw, 40px); border: 1px solid rgba(244, 236, 224, .35); max-width: 520px; justify-self: end; width: 100%; }
+.book__form, .book__done { display: grid; gap: 20px; }
+.book__k { color: var(--cream); }
+.f { display: grid; gap: 8px; }
+.f .sp { font-size: 9px; color: rgba(244, 236, 224, .75); }
+.f--row { grid-template-columns: 1fr 1fr; gap: 20px; }
+.f--row > div { display: grid; gap: 8px; }
+.f__days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.f__days button { padding: 8px 0 6px; display: grid; justify-items: center; gap: 2px; border: 1px solid rgba(244, 236, 224, .35); transition: background .3s, color .3s; }
+.f__days button span { font-size: 8px; letter-spacing: .14em; font-weight: 500; }
+.f__days button b { font-family: var(--f-tc); font-weight: 400; font-size: 24px; line-height: 1; transform: scaleY(1.15); }
+.f__days button:disabled { opacity: .35; cursor: not-allowed; }
+.f__days button:disabled b { text-decoration: line-through; }
+.f__days button.is-on { background: var(--cream); color: var(--felt); }
+.f__sets { display: flex; gap: 4px; }
+.f__sets label { flex: 1; }
+.f__sets input { position: absolute; opacity: 0; pointer-events: none; }
+.f__sets span { display: block; text-align: center; padding: 8px 0 6px; font-size: 26px; border: 1px solid rgba(244, 236, 224, .35); transition: background .3s, color .3s; }
+.f__sets input:checked + span { background: var(--cream); color: var(--felt); }
+.f__party { display: grid; grid-template-columns: 40px 1fr 40px; align-items: center; text-align: center; border: 1px solid rgba(244, 236, 224, .35); }
+.f__party button { font-size: 18px; padding: 6px 0; }
+.f__party output { font-size: 28px; transform: scaleY(1.15); }
+.f__name input { background: none; border: 0; border-bottom: 1px solid rgba(244, 236, 224, .5); color: var(--cream); font-size: 40px; outline: 0; width: 100%; padding: 2px 0; }
+.f__name input::placeholder { color: rgba(244, 236, 224, .4); }
+.f__name.is-bad input { border-color: #fff; }
+.btn { justify-self: start; padding: 14px 32px; background: var(--cream); color: var(--felt); transition: background .3s, color .3s; }
+.btn:hover { background: var(--ink); color: var(--cream); }
+.book__who { font-size: clamp(54px, 5.4vw, 80px); color: var(--cream); }
+.book__code { font-size: clamp(54px, 5.6vw, 84px); transform: scaleY(1.2); transform-origin: left; color: var(--cream); }
+.book__undo { justify-self: start; border-bottom: 1px solid var(--cream); }
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .menu__list { grid-template-columns: minmax(0, 1fr); }
+  .book { grid-template-columns: minmax(0, 1fr); padding-top: 50vh; }
+  .book__card { justify-self: stretch; }
+  .room__caps { gap: 40px; }
+}
+@media (max-width: 600px) {
+  .corner--tl, .corner--tr { top: 80px; font-size: 22px; }
+  .glassfx { height: 82%; bottom: -1%; }
+  .call__sylls { max-width: 300px; gap: 2px 10px; }
+  .week__foot { grid-template-columns: 1fr; gap: 10px; font-size: 18px; }
+  .week__foot p:first-child, .week__foot p:last-child { text-align: center; }
+  .crest { justify-self: center; order: -1; }
+  .week__days { top: 47%; flex-wrap: wrap; justify-content: center; width: 90vw; }
+  .ball--w { width: 70px; height: 70px; } .ball--g { width: 60px; height: 60px; } .ball--s { width: 44px; height: 44px; }
+  .f--row { grid-template-columns: 1fr; }
+  .stamp { font-size: 13px; }
+  .hero__tonight { right: var(--pad); bottom: calc(var(--pad) + 30px); }
+}
+.call.is-poured .call__ans { display: none; }
+.week .stamp { bottom: auto; top: 84px; }
+.week__days { font-size: 11px; }
+.book__code { font-size: clamp(36px, 3.6vw, 56px); white-space: nowrap; }
+.book__card { background: rgba(110, 6, 9, .55); backdrop-filter: none; }
+@media (max-width: 600px) { .glassfx { height: auto; width: 210vw; bottom: -12%; } .call__lock { margin-top: 16vh; } .call__sub { letter-spacing: .2em; } }
+@media (max-width: 600px) { .ball--w { left: 62%; top: 26%; } .ball--g { right: 10%; top: 12%; } .ball--s { left: 14%; top: 8%; } }
+
+/* =========================================================
+   v4.1 — photographic, glossy
+   ========================================================= */
+.week .cam { bottom: auto; top: 84px; }
+.book .cam { bottom: auto; top: 84px; }
+.week .stamp, .week .cam .stamp { top: auto; }
+
+/* ---------- the reservation card: satin glass ---------- */
+.book__card { border-radius: 26px; background: linear-gradient(160deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .03) 40%, rgba(90, 0, 4, .25)), rgba(110, 6, 9, .42);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3);
+  border: 1px solid rgba(255, 240, 230, .32); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), 0 30px 80px rgba(60, 0, 0, .35); }
+.f__days button, .f__sets span, .f__party { border-radius: 999px; }
+.f__days button { border-radius: 16px; }
+.f__days button.is-on, .f__sets input:checked + span, .btn { background: linear-gradient(180deg, #fff 0%, #f6ede2 48%, #e5d6c3 52%, #f2e8dc 100%); box-shadow: inset 0 1px 0 #fff, 0 4px 14px rgba(60, 0, 0, .3); }
+.btn { border-radius: 999px; padding: 15px 36px; }
+.btn:hover { background: linear-gradient(180deg, #2a1a16, #0b0908 52%, #1c1210); color: var(--cream); }
+.week__days button { border-radius: 999px; }
+.week__days button.is-on { background: rgba(255, 245, 235, .1); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2); }
+
+/* ---------- 04½ last night — editorial spread ---------- */
+.gal { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 110px); align-items: center; padding: 130px clamp(40px, 7vw, 120px) 100px; }
+.gal__stage { position: relative; aspect-ratio: 4 / 3; max-height: 76vh; }
+.gal__photos { position: absolute; inset: 0; overflow: hidden; }
+.gal__ph { position: absolute; inset: 0; opacity: 0; transform-origin: 50% 55%; }
+.gal__ph.is-on { opacity: 1; }
+.gal__ph::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 100% at 50% 50%, transparent 55%, rgba(0, 0, 0, .4)); }
+.gal__ph .slot__tag { bottom: 14px; }
+.gal__frame { position: absolute; inset: -16px; border: 1px solid rgba(244, 236, 224, .2); pointer-events: none; }
+.gal__n { position: absolute; left: -16px; bottom: -16px; transform: translate(-50%, 50%); display: flex; align-items: baseline; gap: 6px; padding: 8px 12px; background: var(--ink); color: var(--cream); font-size: 34px; }
+.gal__n small { font-size: 14px; color: var(--mute); }
+.gal__side { display: grid; align-content: center; }
+.gal__the { font-size: clamp(30px, 3vw, 44px); transform: scaleY(1.25); transform-origin: left; color: var(--cream); }
+.gal__scr { font-size: clamp(96px, 10vw, 160px); color: var(--red); margin: -.12em 0 0 -.04em; text-shadow: 0 0 26px rgba(196, 22, 28, .3); }
+.gal__sub { color: var(--mute); font-size: 9px; margin-top: 4px; }
+.gal__idx { margin-top: 44px; border-top: 1px solid rgba(244, 236, 224, .14); font-size: 9px; }
+.gal__idx button { width: 100%; display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; text-align: left; padding: 10px 0; border-bottom: 1px solid rgba(244, 236, 224, .14); color: rgba(244, 236, 224, .42); letter-spacing: .28em; transition: color .5s, padding .6s var(--ease); }
+.gal__idx button:hover { color: var(--cream); }
+.gal__idx button.is-on { color: var(--cream); padding-left: 10px; }
+.gal__idx button.is-on b { color: var(--red); }
+.gal__idx b { font-weight: 500; }
+.gal__cap { margin-top: 34px; min-height: 92px; }
+.gal__cap .scr { font-size: clamp(40px, 3.6vw, 56px); color: var(--cream); }
+.gal__cap .sp { font-size: 9px; color: var(--mute); margin-top: 6px; }
+.gal__bar { display: block; height: 1px; margin-top: 22px; background: rgba(244, 236, 224, .14); }
+.gal__bar i { display: block; height: 100%; background: var(--cream); transform-origin: left; transform: scaleX(0); }
+
+/* the frames' tones until her photos are in */
+.tone-warm { background: radial-gradient(16% 26% at 38% 40%, rgba(255, 228, 200, .75), transparent 70%), radial-gradient(10% 14% at 72% 30%, rgba(255, 210, 170, .55), transparent 70%), radial-gradient(90% 90% at 45% 50%, #7a3a22, #2b130b 70%, #0d0705); }
+.tone-red { background: radial-gradient(14% 22% at 60% 38%, rgba(255, 220, 210, .7), transparent 70%), radial-gradient(30% 30% at 30% 70%, rgba(255, 90, 80, .4), transparent 70%), radial-gradient(90% 90% at 50% 50%, #9c1318, #3d0608 70%, #120203); }
+.tone-bw { background: radial-gradient(14% 24% at 44% 42%, rgba(255, 255, 255, .8), transparent 70%), radial-gradient(18% 26% at 76% 64%, rgba(255, 255, 255, .45), transparent 70%), radial-gradient(90% 90% at 50% 50%, #6a6a6a, #252525 70%, #0c0c0c); }
+.tone-bw > img { filter: grayscale(1) contrast(1.15); }
+.tone-gold { background: radial-gradient(12% 18% at 30% 34%, rgba(255, 244, 210, .8), transparent 70%), radial-gradient(10% 16% at 64% 54%, rgba(255, 236, 190, .6), transparent 70%), radial-gradient(8% 12% at 82% 30%, rgba(255, 236, 190, .5), transparent 70%), radial-gradient(90% 90% at 50% 50%, #6b4a1f, #2a1a0a 70%, #0d0804); }
+.tone-blur { background: radial-gradient(24% 40% at 30% 50%, rgba(255, 200, 170, .55), transparent 70%), radial-gradient(30% 40% at 70% 46%, rgba(220, 60, 50, .45), transparent 70%), radial-gradient(90% 90% at 50% 50%, #4a1d15, #1c0b08 70%, #0b0504); filter: blur(.5px); }
+
+/* ---------- the drinks: a lab print follows the cursor ---------- */
+.print { position: fixed; left: 0; top: 0; z-index: 90; width: 230px; padding: 9px; background: #fbf7f1; border-radius: 3px; pointer-events: none; opacity: 0; visibility: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .5), inset 0 0 0 1px rgba(0, 0, 0, .05); transition: opacity .35s, visibility 0s .35s; }
+.print.is-on { opacity: 1; visibility: visible; transition: opacity .35s, visibility 0s; }
+.print__photo { aspect-ratio: 4 / 5; position: relative; overflow: hidden; background: radial-gradient(40% 30% at 50% 42%, rgba(255, 236, 210, .3), transparent 70%), radial-gradient(90% 90% at 50% 50%, #3a2118, #140b08 70%, #070403); }
+.print__photo svg { position: absolute; left: 50%; top: 52%; width: 52%; transform: translate(-50%, -50%); overflow: visible; filter: drop-shadow(0 0 12px rgba(255, 240, 225, .35)); }
+.print__photo .ln { fill: none; stroke: #f4ece0; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.print__photo .hatch { fill: none; stroke: rgba(255, 255, 255, .25); stroke-width: 1; }
+.print__photo .liq { fill: var(--red); opacity: .85; }
+.print__photo.has-img svg { display: none; }
+.print__photo img { object-fit: contain !important; padding: 10% 8% 6%; filter: drop-shadow(0 14px 18px rgba(0, 0, 0, .5)); }
+.print__photo .stamp { position: absolute; right: 9px; bottom: 7px; font-size: 12px; z-index: 3; }
+.print__cap { margin-top: 8px; display: flex; justify-content: space-between; align-items: baseline; color: #2a1c18; }
+.print__cap .scr { font-size: 26px; line-height: 1; }
+.print__cap .sp { font-size: 8px; letter-spacing: .24em; color: #8a7a70; }
+
+@media (max-width: 600px) {
+  .cam { gap: 4px; } .exif { font-size: 8px; }
+  .week .cam, .book .cam { top: 74px; }
+}
+@media (max-width: 900px) {
+  .gal { grid-template-columns: minmax(0, 1fr); padding: 110px var(--pad) 80px; gap: 50px; }
+  .gal__stage { max-height: none; margin: 0 6px; }
+  .gal__n { left: 50%; transform: translate(-50%, 50%); font-size: 26px; }
+  .gal__side { order: -1; text-align: center; justify-items: center; }
+  .gal__the { transform-origin: center; }
+  .gal__idx { display: none; }
+  .gal__cap { margin-top: 0; min-height: 0; order: 9; }
+  .gal__bar { width: 100%; order: 10; margin-top: 14px; }
+  .gal__cap { margin-top: 22px; }
+}
+
+/* v4.3 — a 2000s luxury "stage": a hairline frame inside every poster, soft black seams between screens */
+.poster::after { content: ''; position: absolute; inset: clamp(10px, 1.2vw, 18px); z-index: 3; border: 1px solid rgba(244, 236, 224, .16); pointer-events: none; }
+.book.poster::after { border-color: rgba(255, 240, 230, .28); }
+.poster::before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 22vh; z-index: 0; pointer-events: none; background: linear-gradient(transparent, rgba(11, 9, 8, .55)); }
+.book.poster::before { display: none; }
+
+/* the week's days: back to plain spaced caps, now above the act's name */
+.week { padding-top: 168px; }
+.week__days { top: 112px; transform: translateX(-50%); font-size: 11px; gap: 4px; }
+.week__days button { color: rgba(243, 223, 198, .78); text-shadow: 0 1px 12px rgba(0, 0, 0, .6); }
+@media (max-width: 600px) { .week { padding-top: 164px; } .week .cam { top: 64px; } .week__days { top: 112px; width: 94vw; gap: 2px; } .week__days button { padding: 6px 7px; font-size: 10px; } }
+
+/* small type on the frosted glass: deeper red, a touch heavier, so it reads over the condensation */
+.call__sub, .call__sylls { color: #8f0c11; font-weight: 500; }
+.call__sylls button:hover { color: #5e0508; border-color: #5e0508; }
